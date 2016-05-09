@@ -1,4 +1,4 @@
-package com.shq.common;
+package com.slimsmart.common;
 
 import java.util.ArrayList;
 import java.util.List;
