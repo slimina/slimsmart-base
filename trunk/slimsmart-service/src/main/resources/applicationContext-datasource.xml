@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="      
+	      http://www.springframework.org/schema/tx 
+       	  http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+          http://www.springframework.org/schema/beans      
+          http://www.springframework.org/schema/beans/spring-beans-4.0.xsd      
+          http://www.springframework.org/schema/context      
+          http://www.springframework.org/schema/context/spring-context-4.0.xsd
+          http://www.springframework.org/schema/util 
+          http://www.springframework.org/schema/util/spring-util-4.0.xsd
+          http://www.springframework.org/schema/aop 
+          http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+          http://www.springframework.org/schema/jee
+		  http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
+		  http://cxf.apache.org/jaxws 
+		  http://cxf.apache.org/schemas/jaxws.xsd"
+	default-lazy-init="false" default-destroy-method="close">
+
+	<description>dataSource</description>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<!-- Connection Info -->
+		<property name="driverClassName" value="${jdbc.driverName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+
+		<!-- Connection Pooling Info -->
+		<property name="defaultAutoCommit" value="false" />
+		<property name="initialSize" value="${dbcp.initialSize}" />
+		<property name="maxActive" value="${dbcp.maxActive}" />
+		<property name="maxIdle" value="${dbcp.maxIdle}" />
+		<property name="minIdle" value="${dbcp.minIdle}" />
+		<property name="maxWait" value="${dbcp.maxWait}" />
+
+		<property name="removeAbandoned" value="${dbcp.removeAbandoned}" />
+		<property name="removeAbandonedTimeout" value="${dbcp.removeAbandonedTimeout}" />
+
+		<property name="validationQuery" value="${dbcp.validationQuery}" />
+		<property name="testOnBorrow" value="${dbcp.testOnBorrow}" />
+		<property name="testOnReturn" value="${dbcp.testOnReturn}" />
+		<property name="testWhileIdle" value="${dbcp.testWhileIdle}" />
+		<property name="minEvictableIdleTimeMillis" value="${dbcp.minEvictableIdleTimeMillis}" />
+		<property name="timeBetweenEvictionRunsMillis" value="${dbcp.timeBetweenEvictionRunsMillis}" />
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:SqlMapConfig.xml" />
+		<property name="mapperLocations" value="classpath*:mapper/**/*Mapper.xml" />
+	</bean>
+
+	<!-- 配置sqlSessionTemplate -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<aop:config>
+		<aop:pointcut id="managerPointcut"
+			expression="execution(* com.shq.service.*.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="managerPointcut" />
+	</aop:config>
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="find*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="search*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="list*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="query*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="is*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="has*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" read-only="false" rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+</beans>
