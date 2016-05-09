@@ -1,4 +1,4 @@
-package com.shq.model.usercenter;
+package com.slimsmart.model.usercenter;
 
 import com.shq.common.model.BaseEntity;
 
