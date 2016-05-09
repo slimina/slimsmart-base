@@ -1,4 +1,4 @@
-package com.shq.api.usercenter;
+package com.slimsmart.api.usercenter;
 
 import com.shq.common.service.BaseService;
 
