@@ -1,4 +1,4 @@
-package com.shq.weboss.common;
+package com.slimsmart.weboss.common;
 
 /**
  * 便于使用静态方法后端获取sesion

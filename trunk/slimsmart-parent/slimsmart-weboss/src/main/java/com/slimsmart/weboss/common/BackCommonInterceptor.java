@@ -1,10 +1,10 @@
-package com.shq.weboss.common;
+package com.slimsmart.weboss.common;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.shq.common.web.CommonInterceptor;
+import com.slimsmart.common.web.CommonInterceptor;
 import com.slimsmart.common.Constants;
 
 /**
