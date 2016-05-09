@@ -424,7 +424,7 @@ slimgrid.prototype = {
 			this.realGrid.treegrid('insert',param); 
 		}
 	},
-	update:function(param){
+	modify:function(param){
 		if(this.options.treeField){
 			this.realGrid.treegrid('update',param); 
 		}
