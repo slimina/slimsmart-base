@@ -1,4 +1,4 @@
-package com.shq.weboss.usercenter;
+package com.slimsmart.weboss.usercenter;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,15 +14,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shq.common.exception.ServiceCode;
-import com.shq.common.util.PasswordUtil;
-import com.shq.common.util.collections.ListUtil;
-import com.shq.common.util.file.ResourcesUtil;
-import com.shq.common.util.http.ResponseMsg;
-import com.shq.common.util.string.StringUtil;
-import com.shq.model.usercenter.support.UserStatus;
-import com.shq.weboss.common.SessionData;
-import com.shq.weboss.common.SessionHolder;
+import com.slimsmart.common.exception.ServiceCode;
+import com.slimsmart.common.util.PasswordUtil;
+import com.slimsmart.common.util.collections.ListUtil;
+import com.slimsmart.common.util.file.ResourcesUtil;
+import com.slimsmart.common.util.http.ResponseMsg;
+import com.slimsmart.common.util.string.StringUtil;
+import com.slimsmart.model.usercenter.support.UserStatus;
+import com.slimsmart.weboss.common.SessionData;
+import com.slimsmart.weboss.common.SessionHolder;
 import com.slimsmart.api.usercenter.BackUserService;
 import com.slimsmart.api.usercenter.PermService;
 import com.slimsmart.api.usercenter.RoleService;

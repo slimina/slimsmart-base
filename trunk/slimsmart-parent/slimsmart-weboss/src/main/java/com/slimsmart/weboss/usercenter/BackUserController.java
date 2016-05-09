@@ -1,4 +1,4 @@
-package com.shq.weboss.usercenter;
+package com.slimsmart.weboss.usercenter;
 
 import java.util.HashMap;
 
@@ -9,13 +9,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shq.common.exception.ServiceCode;
-import com.shq.common.page.Page;
-import com.shq.common.util.PasswordUtil;
-import com.shq.common.util.ReflectionUtil;
-import com.shq.common.util.http.ResponseMsg;
-import com.shq.common.util.string.StringUtil;
-import com.shq.common.web.BaseController;
+import com.slimsmart.common.exception.ServiceCode;
+import com.slimsmart.common.page.Page;
+import com.slimsmart.common.util.PasswordUtil;
+import com.slimsmart.common.util.ReflectionUtil;
+import com.slimsmart.common.util.http.ResponseMsg;
+import com.slimsmart.common.util.string.StringUtil;
+import com.slimsmart.common.web.BaseController;
 import com.slimsmart.api.usercenter.BackUserService;
 import com.slimsmart.model.usercenter.BackUser;
 

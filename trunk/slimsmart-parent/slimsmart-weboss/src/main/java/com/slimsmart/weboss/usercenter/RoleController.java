@@ -1,4 +1,4 @@
-package com.shq.weboss.usercenter;
+package com.slimsmart.weboss.usercenter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,14 +11,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shq.common.exception.ServiceCode;
-import com.shq.common.model.Tree;
-import com.shq.common.page.Page;
-import com.shq.common.util.ReflectionUtil;
-import com.shq.common.util.collections.ListUtil;
-import com.shq.common.util.http.ResponseMsg;
-import com.shq.common.util.string.StringUtil;
-import com.shq.common.web.BaseController;
+import com.slimsmart.common.exception.ServiceCode;
+import com.slimsmart.common.model.Tree;
+import com.slimsmart.common.page.Page;
+import com.slimsmart.common.util.ReflectionUtil;
+import com.slimsmart.common.util.collections.ListUtil;
+import com.slimsmart.common.util.http.ResponseMsg;
+import com.slimsmart.common.util.string.StringUtil;
+import com.slimsmart.common.web.BaseController;
 import com.slimsmart.api.usercenter.PermService;
 import com.slimsmart.api.usercenter.RoleService;
 import com.slimsmart.model.usercenter.Perm;
