@@ -11,8 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shq.api.usercenter.PermService;
-import com.shq.api.usercenter.RoleService;
 import com.shq.common.exception.ServiceCode;
 import com.shq.common.model.Tree;
 import com.shq.common.page.Page;
@@ -23,6 +21,8 @@ import com.shq.common.util.string.StringUtil;
 import com.shq.common.web.BaseController;
 import com.shq.model.usercenter.Perm;
 import com.shq.model.usercenter.Role;
+import com.slimsmart.api.usercenter.PermService;
+import com.slimsmart.api.usercenter.RoleService;
 
 /**
  * 角色管理

@@ -10,12 +10,12 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shq.api.usercenter.RoleService;
 import com.shq.common.service.AbstractBaseService;
 import com.shq.common.util.UUID;
 import com.shq.common.util.string.StringUtil;
 import com.shq.dao.usercenter.RoleDao;
 import com.shq.model.usercenter.Role;
+import com.slimsmart.api.usercenter.RoleService;
 
 /**
  * 角色接口实现
