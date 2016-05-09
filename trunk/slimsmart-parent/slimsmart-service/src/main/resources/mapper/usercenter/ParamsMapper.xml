@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.shq.model.usercenter.Params" >
-  <resultMap id="BaseResultMap" type="com.shq.model.usercenter.Params" >
+<mapper namespace="com.slimsmart.model.usercenter.Params" >
+  <resultMap id="BaseResultMap" type="com.slimsmart.model.usercenter.Params" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="key" property="key" jdbcType="VARCHAR" />
     <result column="value" property="value" jdbcType="VARCHAR" />
@@ -32,14 +32,14 @@
     where id = #{id,jdbcType=VARCHAR}
   </delete>
   
-  <insert id="insert" parameterType="com.shq.model.usercenter.Params" >
+  <insert id="insert" parameterType="com.slimsmart.model.usercenter.Params" >
     insert into tb_params (id, `key`, value, 
       `desc`, create_date)
     values (#{id,jdbcType=VARCHAR}, #{key,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, 
       #{desc,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP})
   </insert>
  
-  <update id="update" parameterType="com.shq.model.usercenter.Params" >
+  <update id="update" parameterType="com.slimsmart.model.usercenter.Params" >
     update tb_params
     <set >
       <if test="key != null" >
@@ -56,7 +56,7 @@
   </update>
   
   
-   <update id="updateByKey" parameterType="com.shq.model.usercenter.Params" >
+   <update id="updateByKey" parameterType="com.slimsmart.model.usercenter.Params" >
     update tb_params set
         value = #{value,jdbcType=VARCHAR}
        where `key` = #{key,jdbcType=VARCHAR}

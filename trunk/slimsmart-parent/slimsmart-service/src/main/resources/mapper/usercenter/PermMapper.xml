@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
-<mapper namespace="com.shq.model.usercenter.Perm" >
-  <resultMap id="BaseResultMap" type="com.shq.model.usercenter.Perm" >
+<mapper namespace="com.slimsmart.model.usercenter.Perm" >
+  <resultMap id="BaseResultMap" type="com.slimsmart.model.usercenter.Perm" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="code" property="code" jdbcType="VARCHAR" />
@@ -49,7 +49,7 @@
  	 delete from tb_perm where parent_id =#{parentId,jdbcType=VARCHAR}
   </delete>
  
-  <insert id="insert" parameterType="com.shq.model.usercenter.Perm" >
+  <insert id="insert" parameterType="com.slimsmart.model.usercenter.Perm" >
     insert into tb_perm (id, name, code, 
       type, status, order_num, parent_id, 
       system_id, icon_url, page_url, 
@@ -107,7 +107,7 @@
     </where>
   </select>
  
-  <update id="update" parameterType="com.shq.model.usercenter.Perm" >
+  <update id="update" parameterType="com.slimsmart.model.usercenter.Perm" >
     update tb_perm
     <set >
       <if test="name != null" >

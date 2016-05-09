@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.shq.model.usercenter.Role" >
-  <resultMap id="BaseResultMap" type="com.shq.model.usercenter.Role" >
+<mapper namespace="com.slimsmart.model.usercenter.Role" >
+  <resultMap id="BaseResultMap" type="com.slimsmart.model.usercenter.Role" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
@@ -63,14 +63,14 @@
     order by t.create_date desc
   </select>
   
-  <insert id="insert" parameterType="com.shq.model.usercenter.Role" >
+  <insert id="insert" parameterType="com.slimsmart.model.usercenter.Role" >
     insert into tb_role (id, name, remark, 
       create_date)
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
       #{createDate,jdbcType=TIMESTAMP})
   </insert>
  
-  <update id="update" parameterType="com.shq.model.usercenter.Role" >
+  <update id="update" parameterType="com.slimsmart.model.usercenter.Role" >
     update tb_role
     <set >
       <if test="name != null" >

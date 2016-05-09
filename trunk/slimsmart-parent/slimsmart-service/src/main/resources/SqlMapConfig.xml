@@ -14,6 +14,6 @@
 	</settings>
 
 	<plugins>
-	    <plugin interceptor="com.shq.common.dao.PagingInterceptor" />
+	    <plugin interceptor="com.slimsmart.common.dao.PagingInterceptor" />
 	</plugins>
 </configuration>
