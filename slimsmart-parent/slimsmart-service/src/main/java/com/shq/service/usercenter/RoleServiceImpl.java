@@ -14,8 +14,8 @@ import com.shq.common.service.AbstractBaseService;
 import com.shq.common.util.UUID;
 import com.shq.common.util.string.StringUtil;
 import com.shq.dao.usercenter.RoleDao;
-import com.shq.model.usercenter.Role;
 import com.slimsmart.api.usercenter.RoleService;
+import com.slimsmart.model.usercenter.Role;
 
 /**
  * 角色接口实现

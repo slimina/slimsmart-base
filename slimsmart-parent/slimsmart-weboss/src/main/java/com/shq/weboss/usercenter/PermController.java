@@ -16,8 +16,8 @@ import com.shq.common.exception.ServiceCode;
 import com.shq.common.util.http.ResponseMsg;
 import com.shq.common.util.string.StringUtil;
 import com.shq.common.web.BaseController;
-import com.shq.model.usercenter.Perm;
 import com.slimsmart.api.usercenter.PermService;
+import com.slimsmart.model.usercenter.Perm;
 
 /**
  * 权限管理

@@ -10,7 +10,7 @@ import com.shq.common.dao.MyBatisDao;
  *
  */
 @Repository
-public class SystemDao extends MyBatisDao<com.shq.model.usercenter.System>{
+public class SystemDao extends MyBatisDao<com.slimsmart.model.usercenter.System>{
 
 	public boolean isExistsCode(String code){
 		long count = count("isExistsCode", code);

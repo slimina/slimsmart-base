@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 import com.shq.common.service.AbstractBaseService;
 import com.shq.common.util.PasswordUtil;
 import com.shq.dao.usercenter.BackUserDao;
-import com.shq.model.usercenter.BackUser;
 import com.shq.model.usercenter.support.UserStatus;
 import com.slimsmart.api.usercenter.BackUserService;
+import com.slimsmart.model.usercenter.BackUser;
 
 /**
  * 后台用户实现

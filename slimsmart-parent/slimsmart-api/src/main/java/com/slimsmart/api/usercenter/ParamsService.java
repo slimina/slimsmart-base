@@ -1,7 +1,7 @@
 package com.slimsmart.api.usercenter;
 
 import com.shq.common.service.BaseService;
-import com.shq.model.usercenter.Params;
+import com.slimsmart.model.usercenter.Params;
 
 public interface ParamsService extends BaseService<Params>{
 	boolean isExistsKey(String key);

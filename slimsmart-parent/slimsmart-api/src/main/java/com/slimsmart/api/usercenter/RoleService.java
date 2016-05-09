@@ -3,7 +3,7 @@ package com.slimsmart.api.usercenter;
 import java.util.List;
 
 import com.shq.common.service.BaseService;
-import com.shq.model.usercenter.Role;
+import com.slimsmart.model.usercenter.Role;
 
 /**
  * <b>角色管理接口</b><br/>

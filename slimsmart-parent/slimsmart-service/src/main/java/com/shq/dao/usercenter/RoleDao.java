@@ -6,7 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Repository;
 
 import com.shq.common.dao.MyBatisDao;
-import com.shq.model.usercenter.Role;
+import com.slimsmart.model.usercenter.Role;
 
 /**
  * 角色Dao

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.shq.common.dao.MyBatisDao;
 import com.shq.common.util.UUID;
-import com.shq.model.usercenter.BackUser;
+import com.slimsmart.model.usercenter.BackUser;
 
 /**
  * 后台用户数据库dao

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.shq.common.service.BaseService;
-import com.shq.model.usercenter.Perm;
+import com.slimsmart.model.usercenter.Perm;
 
 /**
  * <b>资源权限管理接口</b><br/>
