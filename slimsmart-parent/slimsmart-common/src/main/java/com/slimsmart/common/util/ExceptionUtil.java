@@ -1,9 +1,9 @@
-package com.shq.common.util;
+package com.slimsmart.common.util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintWriter;
 
-import com.shq.common.exception.ServiceException;
+import com.slimsmart.common.exception.ServiceException;
 
 /**
  * 服务异常处理工具类

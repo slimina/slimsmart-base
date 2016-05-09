@@ -1,4 +1,4 @@
-package com.shq.common.util.code;
+package com.slimsmart.common.util.code;
 
 import java.security.MessageDigest;
 

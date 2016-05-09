@@ -1,4 +1,4 @@
-package com.shq.common.util;
+package com.slimsmart.common.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,9 +8,9 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.shq.common.util.collections.MapUtil;
-import com.shq.common.util.http.HttpClientUtil;
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.util.collections.MapUtil;
+import com.slimsmart.common.util.http.HttpClientUtil;
+import com.slimsmart.common.util.string.StringUtil;
 
 /**
  * 微信工具类

@@ -1,4 +1,4 @@
-package com.shq.common.util.number;
+package com.slimsmart.common.util.number;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.util.string.StringUtil;
 
 public class NumberUtil extends NumberUtils{
 	

@@ -1,4 +1,4 @@
-package com.shq.common.page;
+package com.slimsmart.common.page;
 
 import java.io.Serializable;
 import java.util.ArrayList;

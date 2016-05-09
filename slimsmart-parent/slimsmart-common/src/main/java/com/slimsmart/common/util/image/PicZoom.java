@@ -1,4 +1,4 @@
-package com.shq.common.util.image;
+package com.slimsmart.common.util.image;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

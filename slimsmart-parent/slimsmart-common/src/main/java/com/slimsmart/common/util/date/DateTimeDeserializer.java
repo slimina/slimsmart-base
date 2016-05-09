@@ -1,4 +1,4 @@
-package com.shq.common.util.date;
+package com.slimsmart.common.util.date;
 
 import java.io.IOException;
 import java.text.DateFormat;

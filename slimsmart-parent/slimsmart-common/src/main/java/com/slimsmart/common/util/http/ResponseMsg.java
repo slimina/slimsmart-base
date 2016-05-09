@@ -1,4 +1,4 @@
-package com.shq.common.util.http;
+package com.slimsmart.common.util.http;
 
 import java.io.Serializable;
 

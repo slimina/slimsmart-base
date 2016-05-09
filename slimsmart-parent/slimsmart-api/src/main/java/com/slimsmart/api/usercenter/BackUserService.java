@@ -1,6 +1,6 @@
 package com.slimsmart.api.usercenter;
 
-import com.shq.common.service.BaseService;
+import com.slimsmart.common.service.BaseService;
 import com.slimsmart.model.usercenter.BackUser;
 
 /**

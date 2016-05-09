@@ -1,4 +1,4 @@
-package com.shq.common.util.file;
+package com.slimsmart.common.util.file;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

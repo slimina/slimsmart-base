@@ -1,6 +1,6 @@
 package com.slimsmart.model.usercenter;
 
-import com.shq.common.model.BaseEntity;
+import com.slimsmart.common.model.BaseEntity;
 
 /**
  * 系统参数设置

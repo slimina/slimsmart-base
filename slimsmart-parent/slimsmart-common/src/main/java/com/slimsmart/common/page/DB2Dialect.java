@@ -1,4 +1,4 @@
-package com.shq.common.page;
+package com.slimsmart.common.page;
 
 public class DB2Dialect  extends Dialect {
 

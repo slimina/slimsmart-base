@@ -1,4 +1,4 @@
-package com.shq.common.dao;
+package com.slimsmart.common.dao;
 
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
@@ -18,10 +18,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 
-import com.shq.common.model.BaseEntity;
-import com.shq.common.page.Page;
-import com.shq.common.util.ReflectionUtil;
-import com.shq.common.util.UUID;
+import com.slimsmart.common.model.BaseEntity;
+import com.slimsmart.common.page.Page;
+import com.slimsmart.common.util.ReflectionUtil;
+import com.slimsmart.common.util.UUID;
 
 @SuppressWarnings({ "unchecked" })
 public class MyBatisDao<T extends BaseEntity> extends SqlSessionDaoSupport {

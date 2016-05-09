@@ -1,4 +1,4 @@
-package com.shq.common.web;
+package com.slimsmart.common.web;
 
 import java.lang.reflect.Method;
 

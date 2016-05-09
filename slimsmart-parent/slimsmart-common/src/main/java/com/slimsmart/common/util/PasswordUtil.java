@@ -1,6 +1,6 @@
-package com.shq.common.util;
+package com.slimsmart.common.util;
 
-import com.shq.common.util.code.MD5Util;
+import com.slimsmart.common.util.code.MD5Util;
 
 /**
  * 密码工具类

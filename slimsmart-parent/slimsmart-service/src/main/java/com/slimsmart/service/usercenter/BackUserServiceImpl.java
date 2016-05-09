@@ -1,12 +1,12 @@
-package com.shq.service.usercenter;
+package com.slimsmart.service.usercenter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shq.common.service.AbstractBaseService;
-import com.shq.common.util.PasswordUtil;
-import com.shq.dao.usercenter.BackUserDao;
-import com.shq.model.usercenter.support.UserStatus;
+import com.slimsmart.common.service.AbstractBaseService;
+import com.slimsmart.common.util.PasswordUtil;
+import com.slimsmart.dao.usercenter.BackUserDao;
+import com.slimsmart.model.usercenter.support.UserStatus;
 import com.slimsmart.api.usercenter.BackUserService;
 import com.slimsmart.model.usercenter.BackUser;
 

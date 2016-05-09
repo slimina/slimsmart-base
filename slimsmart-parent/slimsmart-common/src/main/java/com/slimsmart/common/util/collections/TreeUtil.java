@@ -1,10 +1,10 @@
-package com.shq.common.util.collections;
+package com.slimsmart.common.util.collections;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.shq.common.model.BaseEntity;
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.model.BaseEntity;
+import com.slimsmart.common.util.string.StringUtil;
 
 public class TreeUtil{
 	 /**

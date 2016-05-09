@@ -1,6 +1,6 @@
 package com.slimsmart.api.usercenter;
 
-import com.shq.common.service.BaseService;
+import com.slimsmart.common.service.BaseService;
 
 /**
  * <b>系统管理接口</b><br/>

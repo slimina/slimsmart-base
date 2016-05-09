@@ -1,4 +1,4 @@
-package com.shq.common.web;
+package com.slimsmart.common.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

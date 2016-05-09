@@ -3,7 +3,7 @@ package com.slimsmart.api.usercenter;
 import java.util.List;
 import java.util.Map;
 
-import com.shq.common.service.BaseService;
+import com.slimsmart.common.service.BaseService;
 import com.slimsmart.model.usercenter.Perm;
 
 /**

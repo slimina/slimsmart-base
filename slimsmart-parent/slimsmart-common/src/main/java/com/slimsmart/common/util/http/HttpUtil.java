@@ -1,4 +1,4 @@
-package com.shq.common.util.http;
+package com.slimsmart.common.util.http;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.util.string.StringUtil;
 
 public class HttpUtil {
 	

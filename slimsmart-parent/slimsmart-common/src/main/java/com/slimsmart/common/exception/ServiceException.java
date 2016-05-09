@@ -1,4 +1,4 @@
-package com.shq.common.exception;
+package com.slimsmart.common.exception;
 
 /**
  * 自定义业务异常类

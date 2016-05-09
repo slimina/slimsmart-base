@@ -1,4 +1,4 @@
-package com.shq.common.util;
+package com.slimsmart.common.util;
 
 /**
  * <p>Title: </p>

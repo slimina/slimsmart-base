@@ -1,4 +1,4 @@
-package com.shq.common.util;
+package com.slimsmart.common.util;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;

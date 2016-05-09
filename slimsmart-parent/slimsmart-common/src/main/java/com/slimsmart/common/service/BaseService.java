@@ -1,10 +1,10 @@
-package com.shq.common.service;
+package com.slimsmart.common.service;
 
 import java.util.List;
 import java.util.Map;
 
-import com.shq.common.model.BaseEntity;
-import com.shq.common.page.Page;
+import com.slimsmart.common.model.BaseEntity;
+import com.slimsmart.common.page.Page;
 
 public interface BaseService<T extends BaseEntity> {
 	/**

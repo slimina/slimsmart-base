@@ -1,4 +1,4 @@
-package com.shq.common.web;
+package com.slimsmart.common.web;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -11,9 +11,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.shq.common.model.BaseEntity;
-import com.shq.common.util.ReflectionUtil;
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.model.BaseEntity;
+import com.slimsmart.common.util.ReflectionUtil;
+import com.slimsmart.common.util.string.StringUtil;
 
 /**
  * controller控制层基类

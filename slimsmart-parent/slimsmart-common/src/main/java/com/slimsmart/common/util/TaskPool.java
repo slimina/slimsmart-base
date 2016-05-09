@@ -1,4 +1,4 @@
-package com.shq.common.util;
+package com.slimsmart.common.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
