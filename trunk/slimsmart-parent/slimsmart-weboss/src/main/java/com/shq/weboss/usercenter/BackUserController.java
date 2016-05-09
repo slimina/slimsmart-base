@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shq.api.usercenter.BackUserService;
 import com.shq.common.exception.ServiceCode;
 import com.shq.common.page.Page;
 import com.shq.common.util.PasswordUtil;
@@ -18,6 +17,7 @@ import com.shq.common.util.http.ResponseMsg;
 import com.shq.common.util.string.StringUtil;
 import com.shq.common.web.BaseController;
 import com.shq.model.usercenter.BackUser;
+import com.slimsmart.api.usercenter.BackUserService;
 
 /**
  * 后台用户

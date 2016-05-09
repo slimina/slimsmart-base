@@ -9,13 +9,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shq.api.usercenter.ParamsService;
 import com.shq.common.exception.ServiceCode;
 import com.shq.common.page.Page;
 import com.shq.common.util.ReflectionUtil;
 import com.shq.common.util.http.ResponseMsg;
 import com.shq.common.web.BaseController;
 import com.shq.model.usercenter.Params;
+import com.slimsmart.api.usercenter.ParamsService;
 
 @Controller
 @RequestMapping("/usercenter/params/*")

@@ -10,12 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shq.api.usercenter.SystemService;
 import com.shq.common.exception.ServiceCode;
 import com.shq.common.page.Page;
 import com.shq.common.util.ReflectionUtil;
 import com.shq.common.util.http.ResponseMsg;
 import com.shq.common.web.BaseController;
+import com.slimsmart.api.usercenter.SystemService;
 
 /**
  * 系统管理

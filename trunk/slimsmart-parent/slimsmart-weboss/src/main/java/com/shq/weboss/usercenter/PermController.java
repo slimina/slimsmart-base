@@ -12,12 +12,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shq.api.usercenter.PermService;
 import com.shq.common.exception.ServiceCode;
 import com.shq.common.util.http.ResponseMsg;
 import com.shq.common.util.string.StringUtil;
 import com.shq.common.web.BaseController;
 import com.shq.model.usercenter.Perm;
+import com.slimsmart.api.usercenter.PermService;
 
 /**
  * 权限管理

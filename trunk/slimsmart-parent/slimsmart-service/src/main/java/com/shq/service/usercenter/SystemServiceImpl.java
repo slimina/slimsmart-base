@@ -3,9 +3,9 @@ package com.shq.service.usercenter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shq.api.usercenter.SystemService;
 import com.shq.common.service.AbstractBaseService;
 import com.shq.dao.usercenter.SystemDao;
+import com.slimsmart.api.usercenter.SystemService;
 
 /**
  * 系统管理接口实现

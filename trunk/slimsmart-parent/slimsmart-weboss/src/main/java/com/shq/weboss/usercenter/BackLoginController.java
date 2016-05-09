@@ -14,9 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shq.api.usercenter.BackUserService;
-import com.shq.api.usercenter.PermService;
-import com.shq.api.usercenter.RoleService;
 import com.shq.common.Constants;
 import com.shq.common.exception.ServiceCode;
 import com.shq.common.util.PasswordUtil;
@@ -30,6 +27,9 @@ import com.shq.model.usercenter.Role;
 import com.shq.model.usercenter.support.UserStatus;
 import com.shq.weboss.common.SessionData;
 import com.shq.weboss.common.SessionHolder;
+import com.slimsmart.api.usercenter.BackUserService;
+import com.slimsmart.api.usercenter.PermService;
+import com.slimsmart.api.usercenter.RoleService;
 
 /**
  * 登录用户控制

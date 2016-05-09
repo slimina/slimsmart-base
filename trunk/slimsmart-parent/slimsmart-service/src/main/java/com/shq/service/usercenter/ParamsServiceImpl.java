@@ -6,13 +6,13 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shq.api.usercenter.ParamsService;
 import com.shq.common.Constants;
 import com.shq.common.service.AbstractBaseService;
 import com.shq.common.util.JsonUtil;
 import com.shq.common.util.date.DateUtil;
 import com.shq.dao.usercenter.ParamsDao;
 import com.shq.model.usercenter.Params;
+import com.slimsmart.api.usercenter.ParamsService;
 
 @Service
 public class ParamsServiceImpl extends AbstractBaseService<Params>implements ParamsService {
