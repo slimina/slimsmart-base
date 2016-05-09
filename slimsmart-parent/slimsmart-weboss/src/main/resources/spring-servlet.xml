@@ -16,7 +16,7 @@
 	<!-- 启用spring mvc 注解 -->
 	<context:annotation-config />
 	<!-- 使Spring支持自动检测组件，如注解的Controller -->
-	<context:component-scan base-package="com.shq.weboss" />
+	<context:component-scan base-package="com.slimsmart.weboss" />
 
 	<!-- 配置静态资源，直接映射到对应的文件夹，不被DispatcherServlet处理 -->
 	<mvc:resources mapping="/images/**" location="/images/" />
@@ -58,7 +58,7 @@
 	<bean
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
 		<property name="webBindingInitializer">
-			<bean class="com.shq.common.web.FormDateDataBinding" />
+			<bean class="com.slimsmart.common.web.FormDateDataBinding" />
 		</property>
 		<property name="messageConverters">
 			<util:list id="beanList">
@@ -69,9 +69,9 @@
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
 	<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator" /> 
 	
-	<bean id="commonInterceptor" class="com.shq.common.web.CommonInterceptor">
+	<bean id="commonInterceptor" class="com.slimsmart.common.web.CommonInterceptor">
 	</bean>
-	<bean id="backCommonInterceptor" class="com.shq.weboss.common.BackCommonInterceptor">
+	<bean id="backCommonInterceptor" class="com.slimsmart.weboss.common.BackCommonInterceptor">
 	</bean>
 
 	<!-- 处理在类级别上的@RequestMapping注解 -->

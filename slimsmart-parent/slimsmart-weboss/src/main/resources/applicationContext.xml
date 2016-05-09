@@ -19,9 +19,9 @@
 		  http://www.springframework.org/schema/jee/spring-jee-4.0.xsd"
 		  default-destroy-method="close" default-lazy-init="false" >
 	
-	<context:component-scan base-package="com.shq.common"/>
-	<context:component-scan base-package="com.shq.dao"/>
-	<context:component-scan base-package="com.shq.service"/>
+	<context:component-scan base-package="com.slimsmart.common"/>
+	<context:component-scan base-package="com.slimsmart.dao"/>
+	<context:component-scan base-package="com.slimsmart.service"/>
 	
 	<bean
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -35,7 +35,7 @@
 		</property>
 	</bean>
 	
-	<bean name="backLoginFiler"  class="com.shq.weboss.common.BackLoginFiler">
+	<bean name="backLoginFiler"  class="com.slimsmart.weboss.common.BackLoginFiler">
 		<property name="excludeUrl" value="/error/*;/images/*;/css/*;/plugins/*" />
 	</bean>
 	

@@ -67,7 +67,7 @@
 	</bean>
 	<aop:config>
 		<aop:pointcut id="managerPointcut"
-			expression="execution(* com.shq.service.*.*.*(..))" />
+			expression="execution(* com.slimsmart.service.*.*.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="managerPointcut" />
 	</aop:config>
 

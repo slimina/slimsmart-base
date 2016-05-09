@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.shq.model.usercenter.BackUser" >
-  <resultMap id="BaseResultMap" type="com.shq.model.usercenter.BackUser" >
+<mapper namespace="com.slimsmart.model.usercenter.BackUser" >
+  <resultMap id="BaseResultMap" type="com.slimsmart.model.usercenter.BackUser" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="login_name" property="loginName" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -36,7 +36,7 @@
     where id = #{id,jdbcType=VARCHAR}
   </delete>
 
-  <insert id="insert" parameterType="com.shq.model.usercenter.BackUser" >
+  <insert id="insert" parameterType="com.slimsmart.model.usercenter.BackUser" >
     insert into tb_back_user (id, login_name, password, 
       status, name, phone, email, 
       remark, create_date)
@@ -82,7 +82,7 @@
     order by t.create_date desc
   </select>
   
-  <update id="update" parameterType="com.shq.model.usercenter.BackUser" >
+  <update id="update" parameterType="com.slimsmart.model.usercenter.BackUser" >
     update tb_back_user
     <set >
       <if test="loginName != null" >
