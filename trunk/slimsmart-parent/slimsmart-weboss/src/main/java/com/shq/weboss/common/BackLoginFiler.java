@@ -7,9 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.shq.common.Constants;
 import com.shq.common.util.string.StringUtil;
 import com.shq.common.web.LoginBaseFiler;
+import com.slimsmart.common.Constants;
 
 /**
  * 后台登录过滤器

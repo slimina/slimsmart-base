@@ -19,10 +19,10 @@ import com.shq.common.util.collections.ListUtil;
 import com.shq.common.util.http.ResponseMsg;
 import com.shq.common.util.string.StringUtil;
 import com.shq.common.web.BaseController;
-import com.shq.model.usercenter.Perm;
-import com.shq.model.usercenter.Role;
 import com.slimsmart.api.usercenter.PermService;
 import com.slimsmart.api.usercenter.RoleService;
+import com.slimsmart.model.usercenter.Perm;
+import com.slimsmart.model.usercenter.Role;
 
 /**
  * 角色管理

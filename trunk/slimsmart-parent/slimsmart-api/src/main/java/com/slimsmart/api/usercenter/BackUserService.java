@@ -1,7 +1,7 @@
 package com.slimsmart.api.usercenter;
 
 import com.shq.common.service.BaseService;
-import com.shq.model.usercenter.BackUser;
+import com.slimsmart.model.usercenter.BackUser;
 
 /**
  * <b>后台用户接口</b><br/>

@@ -14,8 +14,8 @@ import com.shq.common.page.Page;
 import com.shq.common.util.ReflectionUtil;
 import com.shq.common.util.http.ResponseMsg;
 import com.shq.common.web.BaseController;
-import com.shq.model.usercenter.Params;
 import com.slimsmart.api.usercenter.ParamsService;
+import com.slimsmart.model.usercenter.Params;
 
 @Controller
 @RequestMapping("/usercenter/params/*")

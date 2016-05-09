@@ -3,7 +3,7 @@ package com.shq.dao.usercenter;
 import org.springframework.stereotype.Repository;
 
 import com.shq.common.dao.MyBatisDao;
-import com.shq.model.usercenter.Params;
+import com.slimsmart.model.usercenter.Params;
 
 @Repository
 public class ParamsDao extends MyBatisDao<Params>{

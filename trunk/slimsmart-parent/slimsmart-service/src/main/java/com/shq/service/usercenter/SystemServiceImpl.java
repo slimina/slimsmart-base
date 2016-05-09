@@ -13,7 +13,7 @@ import com.slimsmart.api.usercenter.SystemService;
  *
  */
 @Service
-public class SystemServiceImpl extends AbstractBaseService<com.shq.model.usercenter.System> implements SystemService {
+public class SystemServiceImpl extends AbstractBaseService<com.slimsmart.model.usercenter.System> implements SystemService {
 
 	@Autowired
 	private SystemDao systemDao;

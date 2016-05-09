@@ -24,7 +24,7 @@ import com.slimsmart.api.usercenter.SystemService;
  */
 @Controller
 @RequestMapping("/usercenter/system/*")
-public class SystemController  extends BaseController<com.shq.model.usercenter.System>{
+public class SystemController  extends BaseController<com.slimsmart.model.usercenter.System>{
 
 	@Autowired
 	private SystemService systemService;
@@ -36,8 +36,8 @@ public class SystemController  extends BaseController<com.shq.model.usercenter.S
 	
 	@RequestMapping("list")
 	@ResponseBody
-	public Page<com.shq.model.usercenter.System> list(System system, Integer page, Integer rows, HttpServletRequest request) throws Exception {
-		Page<com.shq.model.usercenter.System> pageItem = new Page<com.shq.model.usercenter.System>(page, rows);
+	public Page<com.slimsmart.model.usercenter.System> list(System system, Integer page, Integer rows, HttpServletRequest request) throws Exception {
+		Page<com.slimsmart.model.usercenter.System> pageItem = new Page<com.slimsmart.model.usercenter.System>(page, rows);
 		if (system == null) {
 			filterMap = new HashMap<String, Object>();
 		} else {
@@ -48,7 +48,7 @@ public class SystemController  extends BaseController<com.shq.model.usercenter.S
 	
 	@RequestMapping("save")
 	@ResponseBody
-	public ResponseMsg save(com.shq.model.usercenter.System system,HttpServletRequest request) throws Exception{
+	public ResponseMsg save(com.slimsmart.model.usercenter.System system,HttpServletRequest request) throws Exception{
 		ResponseMsg response = new ResponseMsg();
 		try{
 			if(systemService.isExistsCode(system.getCode())){
@@ -66,7 +66,7 @@ public class SystemController  extends BaseController<com.shq.model.usercenter.S
 	
 	@RequestMapping("update")
 	@ResponseBody
-	public ResponseMsg update(com.shq.model.usercenter.System system,HttpServletRequest request) throws Exception{
+	public ResponseMsg update(com.slimsmart.model.usercenter.System system,HttpServletRequest request) throws Exception{
 		ResponseMsg response = new ResponseMsg();
 		try{
 			systemService.update(system);
@@ -80,7 +80,7 @@ public class SystemController  extends BaseController<com.shq.model.usercenter.S
 	
 	@RequestMapping("detail")
 	@ResponseBody
-	public com.shq.model.usercenter.System detail(String id, HttpServletRequest request) throws Exception {
+	public com.slimsmart.model.usercenter.System detail(String id, HttpServletRequest request) throws Exception {
 		return systemService.get(id);
 	}
 	
@@ -100,7 +100,7 @@ public class SystemController  extends BaseController<com.shq.model.usercenter.S
 	
 	@RequestMapping("findList")
 	@ResponseBody
-	public List<com.shq.model.usercenter.System> findList(HttpServletRequest request){
+	public List<com.slimsmart.model.usercenter.System> findList(HttpServletRequest request){
 		return systemService.findList(new HashMap<String, Object>());
 	}
 

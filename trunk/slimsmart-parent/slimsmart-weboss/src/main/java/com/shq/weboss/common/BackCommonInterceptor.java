@@ -4,8 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.shq.common.Constants;
 import com.shq.common.web.CommonInterceptor;
+import com.slimsmart.common.Constants;
 
 /**
  * 管理后台 mvc拦截器

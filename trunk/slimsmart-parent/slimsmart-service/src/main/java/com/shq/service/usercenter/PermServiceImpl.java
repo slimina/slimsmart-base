@@ -12,8 +12,8 @@ import com.shq.common.service.AbstractBaseService;
 import com.shq.common.util.collections.ListUtil;
 import com.shq.common.util.collections.MapUtil;
 import com.shq.dao.usercenter.PermDao;
-import com.shq.model.usercenter.Perm;
 import com.slimsmart.api.usercenter.PermService;
+import com.slimsmart.model.usercenter.Perm;
 
 /**
  * 权限管理接口实现

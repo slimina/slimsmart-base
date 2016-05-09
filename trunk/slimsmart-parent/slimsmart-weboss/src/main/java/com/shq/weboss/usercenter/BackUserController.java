@@ -16,8 +16,8 @@ import com.shq.common.util.ReflectionUtil;
 import com.shq.common.util.http.ResponseMsg;
 import com.shq.common.util.string.StringUtil;
 import com.shq.common.web.BaseController;
-import com.shq.model.usercenter.BackUser;
 import com.slimsmart.api.usercenter.BackUserService;
+import com.slimsmart.model.usercenter.BackUser;
 
 /**
  * 后台用户

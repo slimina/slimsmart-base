@@ -1,4 +1,4 @@
-<%@page import="com.shq.common.Constants"%>
+<%@page import="com.slimsmart.common.Constants"%>
 <%@page import="com.shq.weboss.common.SessionData"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/pages/common/header.jsp"%>

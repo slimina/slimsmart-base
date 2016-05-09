@@ -6,7 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Repository;
 
 import com.shq.common.dao.MyBatisDao;
-import com.shq.model.usercenter.Perm;
+import com.slimsmart.model.usercenter.Perm;
 
 /**
  * 资源权限dao

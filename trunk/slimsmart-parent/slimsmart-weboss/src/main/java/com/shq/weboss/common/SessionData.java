@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.shq.common.model.BaseEntity;
-import com.shq.model.usercenter.Perm;
+import com.slimsmart.model.usercenter.Perm;
 
 /**
  *
