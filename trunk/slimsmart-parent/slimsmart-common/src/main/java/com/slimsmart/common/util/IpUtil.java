@@ -1,4 +1,4 @@
-package com.shq.common.util;
+package com.slimsmart.common.util;
 
 import java.net.Inet4Address;
 import java.net.InetAddress;
@@ -6,7 +6,7 @@ import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.Enumeration;
 
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.util.string.StringUtil;
 
 public class IpUtil {
 	public static String getLocalHostIP(){

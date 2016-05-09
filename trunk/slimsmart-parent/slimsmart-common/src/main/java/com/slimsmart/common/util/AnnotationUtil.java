@@ -1,6 +1,6 @@
-package com.shq.common.util;
+package com.slimsmart.common.util;
 
-import com.shq.common.annotation.Module;
+import com.slimsmart.common.annotation.Module;
 
 
 public class AnnotationUtil {

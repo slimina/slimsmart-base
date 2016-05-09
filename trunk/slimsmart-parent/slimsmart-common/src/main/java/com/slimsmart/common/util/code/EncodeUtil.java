@@ -2,7 +2,7 @@
  * Copyright (c) 2005-2009 springside.org.cn Licensed under the Apache License, Version 2.0 (the "License"); $Id:
  * EncodeUtils.java 984 2010-03-21 13:02:44Z calvinxiu $
  */
-package com.shq.common.util.code;
+package com.slimsmart.common.util.code;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

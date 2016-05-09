@@ -1,12 +1,12 @@
-package com.shq.dao.usercenter;
+package com.slimsmart.dao.usercenter;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.shq.common.dao.MyBatisDao;
-import com.shq.common.util.UUID;
+import com.slimsmart.common.dao.MyBatisDao;
+import com.slimsmart.common.util.UUID;
 import com.slimsmart.model.usercenter.BackUser;
 
 /**

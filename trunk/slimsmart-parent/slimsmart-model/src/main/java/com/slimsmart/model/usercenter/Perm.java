@@ -1,6 +1,6 @@
 package com.slimsmart.model.usercenter;
 
-import com.shq.common.model.Tree;
+import com.slimsmart.common.model.Tree;
 
 /**
  * 权限资源实体

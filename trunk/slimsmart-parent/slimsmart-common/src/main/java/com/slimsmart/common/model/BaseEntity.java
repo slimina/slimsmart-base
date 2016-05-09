@@ -1,4 +1,4 @@
-package com.shq.common.model;
+package com.slimsmart.common.model;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.shq.common.util.date.DateTimeSerializer;
+import com.slimsmart.common.util.date.DateTimeSerializer;
 
 public abstract class BaseEntity implements Serializable {
 

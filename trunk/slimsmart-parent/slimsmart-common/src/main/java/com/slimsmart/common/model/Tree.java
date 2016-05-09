@@ -1,9 +1,9 @@
-package com.shq.common.model;
+package com.slimsmart.common.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.util.string.StringUtil;
 
 /**
  * 树操作对象

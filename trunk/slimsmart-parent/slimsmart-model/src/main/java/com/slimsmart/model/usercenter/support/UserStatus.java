@@ -1,4 +1,4 @@
-package com.shq.model.usercenter.support;
+package com.slimsmart.model.usercenter.support;
 
 /**
  * 用户状态枚举类

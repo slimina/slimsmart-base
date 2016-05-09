@@ -1,4 +1,4 @@
-package com.shq.common.util.xml;
+package com.slimsmart.common.util.xml;
 
 import java.io.InputStream;
 import java.io.StringWriter;
@@ -17,7 +17,7 @@ import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.util.string.StringUtil;
 import com.thoughtworks.xstream.XStream;
 
 @SuppressWarnings("rawtypes")

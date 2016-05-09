@@ -1,4 +1,4 @@
-package com.shq.service.usercenter;
+package com.slimsmart.service.usercenter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,10 +10,10 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shq.common.service.AbstractBaseService;
-import com.shq.common.util.UUID;
-import com.shq.common.util.string.StringUtil;
-import com.shq.dao.usercenter.RoleDao;
+import com.slimsmart.common.service.AbstractBaseService;
+import com.slimsmart.common.util.UUID;
+import com.slimsmart.common.util.string.StringUtil;
+import com.slimsmart.dao.usercenter.RoleDao;
 import com.slimsmart.api.usercenter.RoleService;
 import com.slimsmart.model.usercenter.Role;
 

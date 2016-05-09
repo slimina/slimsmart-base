@@ -1,8 +1,8 @@
-package com.shq.dao.usercenter;
+package com.slimsmart.dao.usercenter;
 
 import org.springframework.stereotype.Repository;
 
-import com.shq.common.dao.MyBatisDao;
+import com.slimsmart.common.dao.MyBatisDao;
 
 /**
  * 系统管理dao

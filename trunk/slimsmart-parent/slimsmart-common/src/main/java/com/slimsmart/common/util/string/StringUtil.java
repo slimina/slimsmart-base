@@ -1,4 +1,4 @@
-package com.shq.common.util.string;
+package com.slimsmart.common.util.string;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.shq.common.util.collections.MapUtil;
+import com.slimsmart.common.util.collections.MapUtil;
 
 public class StringUtil extends StringUtils{
 	

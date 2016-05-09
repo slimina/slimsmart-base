@@ -1,4 +1,4 @@
-package com.shq.common.exception;
+package com.slimsmart.common.exception;
 
 public enum ServiceCode {
 	

@@ -1,4 +1,4 @@
-package com.shq.service.usercenter;
+package com.slimsmart.service.usercenter;
 
 import java.util.Date;
 import java.util.Map;
@@ -6,10 +6,10 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shq.common.service.AbstractBaseService;
-import com.shq.common.util.JsonUtil;
-import com.shq.common.util.date.DateUtil;
-import com.shq.dao.usercenter.ParamsDao;
+import com.slimsmart.common.service.AbstractBaseService;
+import com.slimsmart.common.util.JsonUtil;
+import com.slimsmart.common.util.date.DateUtil;
+import com.slimsmart.dao.usercenter.ParamsDao;
 import com.slimsmart.api.usercenter.ParamsService;
 import com.slimsmart.common.Constants;
 import com.slimsmart.model.usercenter.Params;

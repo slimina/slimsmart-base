@@ -1,10 +1,10 @@
-package com.shq.service.usercenter;
+package com.slimsmart.service.usercenter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shq.common.service.AbstractBaseService;
-import com.shq.dao.usercenter.SystemDao;
+import com.slimsmart.common.service.AbstractBaseService;
+import com.slimsmart.dao.usercenter.SystemDao;
 import com.slimsmart.api.usercenter.SystemService;
 
 /**

@@ -1,4 +1,4 @@
-package com.shq.common.annotation;
+package com.slimsmart.common.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;

@@ -1,4 +1,4 @@
-package com.shq.common.util.http;
+package com.slimsmart.common.util.http;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -22,7 +22,7 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.shq.common.util.TaskPool;
+import com.slimsmart.common.util.TaskPool;
 
 /**
  * <P>Description: HttpClient工具类</P>

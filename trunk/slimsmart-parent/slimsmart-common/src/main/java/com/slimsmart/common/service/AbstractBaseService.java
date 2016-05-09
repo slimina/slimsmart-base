@@ -1,4 +1,4 @@
-package com.shq.common.service;
+package com.slimsmart.common.service;
 
 import java.util.List;
 import java.util.Map;
@@ -7,13 +7,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.shq.common.annotation.Log;
-import com.shq.common.dao.MyBatisDao;
-import com.shq.common.model.BaseEntity;
-import com.shq.common.page.Page;
-import com.shq.common.util.ApplicationContextProvider;
-import com.shq.common.util.ReflectionUtil;
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.annotation.Log;
+import com.slimsmart.common.dao.MyBatisDao;
+import com.slimsmart.common.model.BaseEntity;
+import com.slimsmart.common.page.Page;
+import com.slimsmart.common.util.ApplicationContextProvider;
+import com.slimsmart.common.util.ReflectionUtil;
+import com.slimsmart.common.util.string.StringUtil;
 
 public abstract class AbstractBaseService<T extends BaseEntity> implements BaseService<T> {
 

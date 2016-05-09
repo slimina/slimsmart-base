@@ -1,8 +1,8 @@
-package com.shq.common.util;
+package com.slimsmart.common.util;
 
 import org.apache.commons.lang3.Validate;
 
-import com.shq.common.util.string.StringUtil;
+import com.slimsmart.common.util.string.StringUtil;
 
 /**
  *  数据格式校验工具类

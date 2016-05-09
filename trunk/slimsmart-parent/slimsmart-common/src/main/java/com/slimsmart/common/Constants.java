@@ -1,9 +1,9 @@
-package com.shq.common;
+package com.slimsmart.common;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.shq.common.util.file.ResourcesUtil;
+import com.slimsmart.common.util.file.ResourcesUtil;
 
 /**
  * 存储静态常量

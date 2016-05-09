@@ -1,4 +1,4 @@
-package com.shq.common.dao;
+package com.slimsmart.common.dao;
 
 import java.sql.Connection;
 import java.util.Properties;
@@ -18,11 +18,11 @@ import org.apache.ibatis.session.RowBounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.shq.common.page.DB2Dialect;
-import com.shq.common.page.Dialect;
-import com.shq.common.page.MySQLDialect;
-import com.shq.common.page.OracleDialect;
-import com.shq.common.page.PostgreDialect;
+import com.slimsmart.common.page.DB2Dialect;
+import com.slimsmart.common.page.Dialect;
+import com.slimsmart.common.page.MySQLDialect;
+import com.slimsmart.common.page.OracleDialect;
+import com.slimsmart.common.page.PostgreDialect;
 
 /**
  * 分页实现拦截器

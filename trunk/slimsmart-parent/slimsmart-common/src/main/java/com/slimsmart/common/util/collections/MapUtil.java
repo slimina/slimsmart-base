@@ -1,4 +1,4 @@
-package com.shq.common.util.collections;
+package com.slimsmart.common.util.collections;
 
 
 import org.apache.commons.collections.MapUtils;

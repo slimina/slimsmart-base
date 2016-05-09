@@ -1,4 +1,4 @@
-package com.shq.common.util.collections;
+package com.slimsmart.common.util.collections;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package com.shq.service.usercenter;
+package com.slimsmart.service.usercenter;
 
 import java.util.HashMap;
 import java.util.List;
@@ -7,11 +7,11 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shq.common.model.Tree;
-import com.shq.common.service.AbstractBaseService;
-import com.shq.common.util.collections.ListUtil;
-import com.shq.common.util.collections.MapUtil;
-import com.shq.dao.usercenter.PermDao;
+import com.slimsmart.common.model.Tree;
+import com.slimsmart.common.service.AbstractBaseService;
+import com.slimsmart.common.util.collections.ListUtil;
+import com.slimsmart.common.util.collections.MapUtil;
+import com.slimsmart.dao.usercenter.PermDao;
 import com.slimsmart.api.usercenter.PermService;
 import com.slimsmart.model.usercenter.Perm;
 

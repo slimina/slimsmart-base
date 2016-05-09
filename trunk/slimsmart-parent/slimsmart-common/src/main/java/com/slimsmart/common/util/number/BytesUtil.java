@@ -1,4 +1,4 @@
-package com.shq.common.util.number;
+package com.slimsmart.common.util.number;
 
 /**
  *
