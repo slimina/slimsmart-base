@@ -1,23 +1,6 @@
-/*
-Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50521
-Source Host           : localhost:3306
-Source Database       : shq
+---默认用户：admin  密码：111111
 
-Target Server Type    : MYSQL
-Target Server Version : 50521
-File Encoding         : 65001
-
-Date: 2016-03-28 15:05:07
-*/
-
-SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for tb_back_user
--- ----------------------------
 DROP TABLE IF EXISTS `tb_back_user`;
 CREATE TABLE `tb_back_user` (
   `id` varchar(40) NOT NULL COMMENT '主键',
@@ -33,14 +16,8 @@ CREATE TABLE `tb_back_user` (
   UNIQUE KEY `index_login_name` (`login_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tb_back_user
--- ----------------------------
 INSERT INTO `tb_back_user` VALUES ('a661a3e0faa84e30ac0eee1731a00489', 'admin', '0740b251b4dcf750444230b9cdf7d3d0', '0', '系统管理员', '1236655555', '1233@223.cn', '去去去1', '2015-11-13 17:51:30');
 
--- ----------------------------
--- Table structure for tb_params
--- ----------------------------
 DROP TABLE IF EXISTS `tb_params`;
 CREATE TABLE `tb_params` (
   `id` varchar(40) NOT NULL COMMENT '主键',
@@ -51,13 +28,6 @@ CREATE TABLE `tb_params` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tb_params
--- ----------------------------
-
--- ----------------------------
--- Table structure for tb_perm
--- ----------------------------
 DROP TABLE IF EXISTS `tb_perm`;
 CREATE TABLE `tb_perm` (
   `id` varchar(40) NOT NULL COMMENT '主键',
@@ -75,9 +45,6 @@ CREATE TABLE `tb_perm` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tb_perm
--- ----------------------------
 INSERT INTO `tb_perm` VALUES ('27e6e3620be4491187d2326621aaebe3', '系统管理', 'usercenter-system', '0', '0', '4', '30fe6df68d114cbba460b3bc02469516', '529d2fb6c84d4c50af49104cf4e9f8ca', '-880,-280', '/usercenter/system/index.do', '', '2015-11-18 11:24:58');
 INSERT INTO `tb_perm` VALUES ('30fe6df68d114cbba460b3bc02469516', '系统管理', 'usercenter', '0', '0', '0', '', '529d2fb6c84d4c50af49104cf4e9f8ca', '0,-560', '', '', '2015-11-18 11:14:09');
 INSERT INTO `tb_perm` VALUES ('4c5fbea288f94fc594f75279ccf9b0d3', '后台用户', 'centeruser-backuser', '0', '0', '1', '30fe6df68d114cbba460b3bc02469516', '529d2fb6c84d4c50af49104cf4e9f8ca', '-880,-70', '/usercenter/backUser/index.do', '', '2015-11-18 11:15:21');
@@ -121,7 +88,7 @@ CREATE TABLE `tb_system` (
 -- ----------------------------
 -- Records of tb_system
 -- ----------------------------
-INSERT INTO `tb_system` VALUES ('529d2fb6c84d4c50af49104cf4e9f8ca', '运营系统', '0', 'shq-boss', 'http://boss.shq.com', '', '2015-11-16 13:31:14');
+INSERT INTO `tb_system` VALUES ('529d2fb6c84d4c50af49104cf4e9f8ca', '运营系统', '0', 'slimsmart-boss', 'http://boss.slimsmart.cn', '', '2015-11-16 13:31:14');
 
 -- ----------------------------
 -- Table structure for tr_role_perm
