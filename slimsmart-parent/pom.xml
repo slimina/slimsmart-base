@@ -7,7 +7,7 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
-	<name>slimsmart-parent<</name>
+	<name>slimsmart-parent</name>
 	<url>http://blog.csdn.net/zhu_tianwei/</url>
 	<description>项目parent配置</description>
 
