@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shq.model.usercenter.Role" >
+  <resultMap id="BaseResultMap" type="com.shq.model.usercenter.Role" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, name, remark, create_date
+  </sql>
+   
+  <select id="get" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_role
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  
+  <select id="getRoleByUserId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+   	from tb_role t where EXISTS (select 1 from tr_user_role r where r.role_id = t.id and r.user_id =#{userId,jdbcType=VARCHAR})
+  </select>
+  
+  <delete id="delete" parameterType="java.lang.String" >
+    delete from tb_role
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  
+   <sql id="selectWhereClause">
+   		<if test="name!=null">
+   			and t.name like concat('%',#{name,jdbcType=VARCHAR},'%')
+   		</if>
+   </sql>
+
+  <select id="count" resultType="long" parameterType="map">
+    select count(*) from tb_role t
+    <where>
+    	<include refid="selectWhereClause" />
+    </where>
+  </select>
+  
+  <select id="findPage" resultMap="BaseResultMap" parameterType="map">
+    select 
+     <include refid="Base_Column_List" />
+     from tb_role t
+    <where>
+    	<include refid="selectWhereClause" />
+    </where>
+    order by t.create_date desc
+  </select>
+  
+  <select id="findList" resultMap="BaseResultMap" parameterType="map">
+    select 
+     <include refid="Base_Column_List" />
+     from tb_role t
+    <where>
+    	<include refid="selectWhereClause" />
+    </where>
+    order by t.create_date desc
+  </select>
+  
+  <insert id="insert" parameterType="com.shq.model.usercenter.Role" >
+    insert into tb_role (id, name, remark, 
+      create_date)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{createDate,jdbcType=TIMESTAMP})
+  </insert>
+ 
+  <update id="update" parameterType="com.shq.model.usercenter.Role" >
+    update tb_role
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  
+  <!-- 用户角色关联查询  -->
+  <select id="isExistsBackUser" parameterType="string" resultType="long">
+  	select count(1) from tr_user_role t where t.role_id =#{roleId,jdbcType=VARCHAR}
+  </select>
+  
+  <!-- 角色权限关联查询  -->
+  <select id="getPermIdListByRoleId" parameterType="string" resultType="string">
+  	select t.perm_id from tr_role_perm t WHERE t.role_id =#{roleId,jdbcType=VARCHAR}
+  </select>
+  
+  <insert id="bindRolePermId" parameterType="map">
+  		insert into tr_role_perm(id,role_id,perm_id) values (#{id,jdbcType=VARCHAR}, #{roleId,jdbcType=VARCHAR}, #{permId,jdbcType=VARCHAR})
+  </insert>
+  <delete id="deletePermIdsByRoleId" parameterType="string">
+  	delete from tr_role_perm  where role_id = #{roleId,jdbcType=VARCHAR};
+  </delete>
+</mapper>

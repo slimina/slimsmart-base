@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.shq.model.usercenter.Perm" >
+  <resultMap id="BaseResultMap" type="com.shq.model.usercenter.Perm" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="CHAR" />
+    <result column="status" property="status" jdbcType="CHAR" />
+    <result column="order_num" property="orderNum" jdbcType="INTEGER" />
+    <result column="parent_id" property="parentId" jdbcType="VARCHAR" />
+    <result column="system_id" property="systemId" jdbcType="VARCHAR" />
+    <result column="icon_url" property="iconUrl" jdbcType="VARCHAR" />
+    <result column="page_url" property="pageUrl" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, name, code, type, status, order_num, parent_id, system_id, icon_url, page_url, 
+    remark, create_date
+  </sql>
+   
+  <select id="get" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_perm
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  
+  <select id="isExistsCode" parameterType="map" resultType="long">
+  	select count(1) from tb_perm where code = #{code,jdbcType=VARCHAR}
+  	and system_id = #{systemId,jdbcType=VARCHAR}
+  	<if test="permId != null">
+  		<![CDATA[
+  		and id <> #{permId,jdbcType=VARCHAR}
+  		]]>
+  	</if>
+  </select>
+  <delete id="delete" parameterType="java.lang.String" >
+    delete from tb_perm
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  
+  <delete id="deleteRolePermByPermId" parameterType="java.lang.String">
+  	delete from tr_role_perm where perm_id = #{permId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deletePermByPid" parameterType="java.lang.String" >
+ 	 delete from tb_perm where parent_id =#{parentId,jdbcType=VARCHAR}
+  </delete>
+ 
+  <insert id="insert" parameterType="com.shq.model.usercenter.Perm" >
+    insert into tb_perm (id, name, code, 
+      type, status, order_num, parent_id, 
+      system_id, icon_url, page_url, 
+      remark, create_date)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{type,jdbcType=CHAR}, #{status,jdbcType=CHAR}, #{orderNum,jdbcType=INTEGER}, #{parentId,jdbcType=VARCHAR}, 
+      #{systemId,jdbcType=VARCHAR}, #{iconUrl,jdbcType=VARCHAR}, #{pageUrl,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP})
+  </insert>
+  
+   <sql id="selectWhereClause">
+   		<if test="name!=null">
+   			and t.name like concat('%',#{name,jdbcType=VARCHAR},'%')
+   		</if>
+   		<if test="status!=null">
+   			and t.status = #{status,jdbcType=VARCHAR}
+   		</if>
+   		<if test="systemId!=null">
+   			and t.system_id = #{systemId,jdbcType=VARCHAR}
+   		</if>
+   		<if test="parentId!=null">
+   			and t.parent_id = #{parentId,jdbcType=VARCHAR}
+   		</if>
+   		<if test="type!=null">
+   			and t.type = #{type,jdbcType=VARCHAR}
+   		</if>
+   		<if test="noParentId!=null">
+   			and t.parent_id is null
+   		</if>
+   </sql>
+
+  <select id="count" resultType="long" parameterType="map">
+    select count(*) from tb_perm t
+    <where>
+    	<include refid="selectWhereClause" />
+    </where>
+  </select>
+  
+  <select id="findPage" resultMap="BaseResultMap" parameterType="map">
+    select 
+     <include refid="Base_Column_List" />
+     from tb_perm t
+    <where>
+    	<include refid="selectWhereClause" />
+    </where>
+    order by t.create_date desc
+  </select>
+  
+  <select id="findList" resultMap="BaseResultMap" parameterType="map">
+    select 
+     <include refid="Base_Column_List" />
+     from tb_perm t
+    <where>
+    	<include refid="selectWhereClause" />
+    </where>
+  </select>
+ 
+  <update id="update" parameterType="com.shq.model.usercenter.Perm" >
+    update tb_perm
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=CHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=CHAR},
+      </if>
+      <if test="orderNum != null" >
+        order_num = #{orderNum,jdbcType=INTEGER},
+      </if>
+      <if test="parentId != null" >
+        parent_id = #{parentId,jdbcType=VARCHAR},
+      </if>
+      <if test="systemId != null" >
+        system_id = #{systemId,jdbcType=VARCHAR},
+      </if>
+      <if test="iconUrl != null" >
+        icon_url = #{iconUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="pageUrl != null" >
+        page_url = #{pageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  
+  <!-- 查询角色绑定有效菜单 -->
+  <select id="getMenuListByRoleId" resultMap="BaseResultMap" parameterType="map">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_perm t 
+	where EXISTS(select 1 from tr_role_perm p where p.perm_id = t.id and p.role_id =#{roleId,jdbcType=VARCHAR})
+	and EXISTS (SELECT 1 from tb_system s where s.id = t.system_id and s.code=#{systemCode,jdbcType=VARCHAR})
+	and t.`status` = '0' and t.type = '0' ORDER BY t.order_num
+  </select>
+  <!-- 查询角色绑定有效功能按钮 -->
+  <select id="getFuncListByRoleId" resultMap="BaseResultMap" parameterType="map">
+	select 
+	<include refid="Base_Column_List" />
+	from tb_perm t 
+	where EXISTS(select 1 from tr_role_perm p where p.perm_id = t.id and p.role_id =#{roleId,jdbcType=VARCHAR})
+	and EXISTS (SELECT 1 from tb_system s where s.id = t.system_id and s.code=#{systemCode,jdbcType=VARCHAR})
+	and t.`status` = '0' and t.type = '1' ORDER BY t.order_num
+  </select>
+  
+</mapper>

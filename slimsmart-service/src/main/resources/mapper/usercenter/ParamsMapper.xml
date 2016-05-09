@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shq.model.usercenter.Params" >
+  <resultMap id="BaseResultMap" type="com.shq.model.usercenter.Params" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="key" property="key" jdbcType="VARCHAR" />
+    <result column="value" property="value" jdbcType="VARCHAR" />
+    <result column="desc" property="desc" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+ 
+  <sql id="Base_Column_List" >
+    id, `key`, value, `desc`, create_date
+  </sql>
+ 
+  <select id="get" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_params
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  
+  <select id="getByKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_params
+    where `key` = #{key,jdbcType=VARCHAR}
+  </select>
+  
+  <delete id="delete" parameterType="java.lang.String" >
+    delete from tb_params
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  
+  <insert id="insert" parameterType="com.shq.model.usercenter.Params" >
+    insert into tb_params (id, `key`, value, 
+      `desc`, create_date)
+    values (#{id,jdbcType=VARCHAR}, #{key,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, 
+      #{desc,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP})
+  </insert>
+ 
+  <update id="update" parameterType="com.shq.model.usercenter.Params" >
+    update tb_params
+    <set >
+      <if test="key != null" >
+        `key` = #{key,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null" >
+        value = #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="desc != null" >
+        `desc` = #{desc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  
+  
+   <update id="updateByKey" parameterType="com.shq.model.usercenter.Params" >
+    update tb_params set
+        value = #{value,jdbcType=VARCHAR}
+       where `key` = #{key,jdbcType=VARCHAR}
+  </update>
+  
+   <select id="findPage" resultMap="BaseResultMap" parameterType="map">
+    select 
+     <include refid="Base_Column_List" />
+    from tb_params t
+    <where>
+    	<include refid="selectWhereClause" />
+    </where>
+    order by t.create_date desc
+  </select>
+  <select id="count" resultType="long" parameterType="map">
+    select count(*) from tb_params t
+    <where>
+    	<include refid="selectWhereClause" />
+    </where>
+  </select>
+  <sql id="selectWhereClause">
+   		<if test="key!=null">
+   			and t.key like concat('%',#{key,jdbcType=VARCHAR},'%')
+   		</if>
+  </sql>
+  <select id="isExistsKey" parameterType="string" resultType="long">
+  	select count(1) from tb_params t where t.key =#{key,jdbcType=VARCHAR}
+  </select>
+</mapper>
