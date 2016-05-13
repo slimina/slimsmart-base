@@ -490,9 +490,8 @@ slimgrid.prototype = {
 			    			success : function(data){
 			    				if(!data){
 			    					if(p.error){
-			    						p.error();
+			    						p.error($('#'+obj.options.renderDialogId));
 			    					}
-			    					$.messager.error("保存失败");
 			    					return;
 			    				}
 			    				try{
@@ -588,9 +587,8 @@ slimgrid.prototype = {
 			    			success : function(data){
 			    				if(!data){
 			    					if(p.error){
-			    						p.error();
+			    						p.error($('#'+obj.options.renderDialogId));
 			    					}
-			    					$.messager.error("保存失败");
 			    					return;
 			    				}
 			    				try{
